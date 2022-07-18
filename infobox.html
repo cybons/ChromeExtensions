@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>サイトタイトル</title>
+    <style>
+      input[type='radio'] {
+        display: none; /* チェックボックスを非表示にする */
+      }
+      input[type='radio']:checked + label {
+        background: #31a9ee; /* マウス選択時の背景色を指定する */
+        color: #ffffff; /* マウス選択時のフォント色を指定する */
+      }
+      .label {
+        display: block;
+        float: left;
+        margin: 5px;
+        width: 100px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        padding-left: 5px;
+        padding-right: 5px;
+        cursor: pointer;
+        color: #000000;
+        border: 2px solid #006dd9;
+        background-color: rgb(226, 243, 243);
+        border-radius: 5px;
+      }
+
+      .main-container div {
+        display: flex;
+        justify-content: center;
+      }
+      div.btn-area {
+        justify-content: center;
+        margin-top: 1rem;
+      }
+      .btn-area input {
+        display: inline-block;
+        text-align: center;
+        margin: auto 1rem;
+        width: 5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main-content" class="main-container">
+      <div>
+        <input type="radio" name="hold" id="hold" value="hold" />
+        <label for="hold" class="label">保留</label>
+        <input type="radio" name="hold" id="release" value="release" />
+        <label for="release" class="label">解除</label>
+      </div>
+      <div><textarea type="textarea" cols="30" rows="10">aa</textarea></div>
+
+      <div class="btn-area">
+        <input id="submit" type="submit" value="送信" />
+        <input id="cancel" type="reset" value="リセット" />
+      </div>
+    </div>
+
+    <script src="./js/modal.js">
+
+      //   window.addEventListener('beforeunload', function (e) {
+      //     var confirmationMessage = '入力内容を破棄します。';
+      //     e.returnValue = confirmationMessage;
+      //     return confirmationMessage;
+      //   });
+    </script>
+  </body>
+</html>
